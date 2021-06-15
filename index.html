@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Space Jam</title>
+	 <link rel="icon" 
+      type="image/icon" 
+      href="imgs/1.png">
+</head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js">
+</script>
+
+<body>
+  
+<audio id="musicplayer" autoplay>
+  <source src="jelly_jam.mp3">
+</audio>
+
+<script>
+    document.onclick = userClicked;
+    function userClicked() {
+    var x = event.clientX;
+    var y = event.clientY;
+    var snowball = document.getElementById("moranguinhoAparece");
+    snowball.style.display = '';
+    snowball.style.position = 'absolute';
+    snowball.style.left = x + 'px';
+    snowball.style.top = y + 'px';
+}
+
+</script>
+
+<div class ="container">
+    <div class ="morango">
+        <img alt="moranguinhoAparece" id="moranguinhoAparece" style="display: none" src="imgs/1.png">
+    </div>
+</div>
+
+
+<img src="imgs/jellyjam.png" class="floating" id="jam">
+
+<script>
+	  $(document).mousemove(function (e) {
+      $(".pointer").css({ left: e.pageX, top: e.pageY });
+    });
+
+</script>
+
+<div class="pointer">
+	<img src="imgs/jamspoon.png">
+</div>
+
+
+
+
+
+</body>
+</html>
